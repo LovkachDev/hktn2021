@@ -32,9 +32,7 @@
                     в Екатеринбурге. Мы готовы получать новые знания и решать 
                     задачи любой сложности!
                 </div>
-                <div class="prewiew__button flex">
-                    Участники
-                </div>
+                <a href = '#pl'><div class="prewiew__button flex">Участники</div></a>
             </div>
             <div class="main__img">
                 <img src="https://i.ibb.co/DwcyRmr/image.png" width="650" height="600px" class = 'minimg'>
@@ -110,18 +108,20 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script>
-    SmoothScroll({
-        animationTime    : 700,
-        stepSize         : 70,
-        accelerationDelta : 30,  
-        accelerationMax   : 2,   
-        keyboardSupport   : true,  
-        arrowScroll       : 50,
-        pulseAlgorithm   : true,
-        pulseScale       : 4,
-        pulseNormalize   : 1,
-        touchpadSupport   : true,
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
     })
+  })
+}
     </script>
 </body>
 </html>

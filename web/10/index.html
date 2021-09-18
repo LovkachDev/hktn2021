@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./IMG/icon.png" type="image/png">
+    <title>Form</title>
+    <link rel='stylesheet' href='./CSS/normalize.css'>
+    <link rel='stylesheet' href='./CSS/style.css'>
+</head>
+<body>
+    <form action='#' method='post' enctype="multipart/form-data">
+        <select>
+            <option value='eng'>en</option>
+            <option value='rus'>ru</option>
+            <option value='ara'>ar</option>
+        </select>
+        <h1>Form title</h1>
+        <div class="form">
+            <div class="flex">
+                <p>first<br>name*:</p>
+                <input type='text' name='firstName' value=''>
+                <p>last name*:</p>
+                <input type='text' name='lastName' value=''>
+            </div>
+            <div class="flex">
+                <p>email*:</p>
+                <input type='text' name='email' value=''>
+            </div>
+            <div class="flex frst">
+                <p>company:</p>
+                <input type='text' name='company' value=''>
+            </div>
+            <div class="flex">
+                <p>city*:</p>
+                <input type='text' name='city' value=''>
+            </div>
+            <div class="flex">
+                <p>message*:</p>
+                <textarea class='message' name='text' cols='20' rows='10'></textarea>
+            </div>
+            <button type='submit'>Send</button>
+        </div>
+    </form>
+</body>
+</html>

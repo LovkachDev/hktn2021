@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+a
+{
+    text-decoration: none;
+}
 body
 {
     font-family: 'Montserrat', sans-serif;
@@ -45,12 +49,17 @@ header
     width:100%;
     height: 100%;
 }
+.navigation a
+{
+    color:#fff;
+}
 .navigation__logo
 {
+    cursor: pointer;
     align-self: center;
     color:#fff;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .nav
 {
@@ -63,6 +72,7 @@ header
 }
 .nav li
 {
+    position: relative;
     align-self: center;
     font-weight: 500;
     font-size: 20px;
@@ -70,6 +80,15 @@ header
     color: rgba(172, 125, 226, 0.8);
     margin:0px 42px;
     cursor:pointer;
+    transition: 0.3s all;
+}
+.nav li a
+{
+    color: rgba(172, 125, 226, 0.8);
+}
+.nav li:hover
+{
+    top:-3px;
 }
 .prewiew__area 
 {
@@ -111,6 +130,13 @@ header
     text-shadow: 0px 0px 26px rgba(0, 0, 0, 0.2);
     background: linear-gradient(104.81deg, rgba(148, 89, 216, 0.3) -37.68%, rgba(202, 165, 209, 0.3) 255.95%);
     border-radius: 10.3448px;
+    cursor: pointer;
+    transition: .5 all;
+}
+.prewiew__button:hover
+{
+    margin: -2px 0px;
+    opacity: .8;
 }
 .main__img
 {
@@ -195,6 +221,7 @@ header
 }
 .row__vk
 {
+    cursor: pointer;
     position:absolute;
     float: right;
     top:20px;
